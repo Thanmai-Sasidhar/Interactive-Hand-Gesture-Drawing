@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Hand Gesture Drawing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Farsan&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="cover">Welcome to Hand Gesture Drawing Website</div>
+
+  <div id="main-content">
+    <h1 class="title">Interactive Hand Gesture Drawing</h1>
+
+    <div id="toolbar">
+      <select id="color-picker">
+        <option value="black">Black</option>
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+      </select>
+      <input type="range" id="brush-size" min="1" max="20" value="5">
+      <button onclick="saveDrawing()">Save Drawing</button>
+    </div>
+
+    <div id="status">Status: Waiting to start...</div>
+
+    <video id="video" autoplay playsinline></video>
+    <canvas id="outputCanvas"></canvas>
+    <canvas id="drawCanvas"></canvas>
+
+    <div id="controls">
+      <button id="startBtn">Start</button>
+      <button id="endBtn">End</button>
+    </div>
+  </div>
+
+  <div class="instr">
+    <li>Index Finger to Draw</li>
+    <li>Two Fingers to move on screen</li>
+    <li>All Fingers to clear screen</li>
+    <li>Show wrist to Erase</li>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

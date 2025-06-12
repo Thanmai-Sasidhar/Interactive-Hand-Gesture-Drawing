@@ -1,0 +1,101 @@
+* {
+  font-family: 'Farsan', cursive;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('pexels-tara-winstead-8386440.jpg');
+  background-size: cover;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #ffffff79;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 10;
+}
+
+#main-content {
+  display: none;
+  padding-top: 20px;
+}
+
+canvas {
+  border: 1px solid black;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: rgba(228, 242, 255, 0.747);
+}
+
+video {
+  display: none;
+}
+
+#toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#status {
+  font-weight: bold;
+  margin-top: 10px;
+  color: aliceblue;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+#controls button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#cover.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+.instr {
+  background-color: rgba(240, 248, 255, 0.601);
+  position: relative;
+  display: block;
+  height: 120px;
+  width: 270px;
+  align-content: center;
+  border-radius: 10px;
+  margin-top: 120px;
+}
+
+.title {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.608);
+  padding: 10px 0;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
